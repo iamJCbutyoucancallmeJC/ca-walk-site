@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2027 &middot; The California Walk</title>
+    <meta name="description" content="The 2027 California Walk. Five days, four nights, mid-April. San Francisco to Big Sur. Personal invite.">
+    <meta property="og:title" content="2027 -- The California Walk">
+    <meta property="og:description" content="The 2027 California Walk. Five days, four nights, mid-April. If you're interested, leave a note.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thecaliforniawalk.com/2027/">
+    <meta property="og:image" content="https://thecaliforniawalk.com/hero-image.jpg">
+    <link rel="canonical" href="https://thecaliforniawalk.com/2027/">
+    <link rel="stylesheet" href="/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZSX5BPCNR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KZSX5BPCNR');
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/"><img src="/california-walk-logo.png" alt="The California Walk"></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/route/">Route</a></li>
+                <li><a href="/2025/">2025</a></li>
+                <li><a href="/2026/">2026</a></li>
+                <li><a href="/2027/" class="active">2027</a></li>
+                <li><a href="/2027/" class="cta active">Walk With Us</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="prose">
+        <h1 class="page-title">2027</h1>
+
+        <div class="meta-block">
+            <p class="fact-line"><strong>When:</strong> Wednesday, April 14 to Sunday, April 18, 2027</p>
+            <p class="fact-line"><strong>Where:</strong> San Francisco to Big Sur, by way of Santa Cruz and Carmel Valley</p>
+            <p class="fact-line"><strong>Shape:</strong> Five days, four nights. Small group. Optional fifth night for those staying through Sunday.</p>
+        </div>
+
+        <p>The third California Walk. A return to the group form after a solo year. The shape that arrived on the drive home from <a href="/2026/">2026</a>: five days, four nights, moving south. Day 0 is a San Francisco pickup. Tan Bark is the closing hike.</p>
+
+        <p>Moving south as the journey shape: through, past, beyond.</p>
+
+        <hr class="rule">
+
+        <h2 class="section-title">The shape</h2>
+
+        <ul>
+            <li><strong>Wed Apr 14, Day 0.</strong> San Francisco. Presidio walk, lunch in the park, drive south to Santa Cruz in the afternoon. Santa Cruz night.</li>
+            <li><strong>Thu Apr 15, Day 1.</strong> Henry Cowell. The river crossing. Santa Cruz night.</li>
+            <li><strong>Fri Apr 16, Day 2.</strong> Monterey bay walk. Santa Cruz night.</li>
+            <li><strong>Sat Apr 17, Day 3.</strong> Garland Ranch in Carmel Valley, then drive south on Highway 1. Big Sur night.</li>
+            <li><strong>Sun Apr 18, Day 4.</strong> Tan Bark Trail as the closing hike. Drive home, or stay an optional second Big Sur night.</li>
+        </ul>
+
+        <p>Base camp model. Three nights in Santa Cruz, one in Big Sur. (Optional second Big Sur night Sunday for the longer drive home Monday morning.) Walk by day, eat together at night.</p>
+
+        <p>A design principle from last year: build for the too-busy person. Alternatives. Choose-your-intensity paths. Come for a day, come for the week. Whatever you can carry.</p>
+
+        <hr class="rule">
+
+        <h2 class="section-title">If you want to come</h2>
+
+        <p>The invite has always been a phone call. If you already have my number, that's still the right way in.</p>
+
+        <p>If you don't, leave a note here. Name, email, and anything you want to say. I'll call.</p>
+
+        <form id="invite-form" class="invite-form" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel">
+
+            <label for="note">Anything you want to say (optional)</label>
+            <textarea id="note" name="note" placeholder="How you know me, what's drawing you to the walk, what days you could do, etc."></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+
+        <div id="form-success" class="form-success">
+            Thanks. I got it. I'll be in touch.
+        </div>
+
+        <p class="form-note">No list, no marketing. The note goes straight to me.</p>
+
+        <div class="page-nav">
+            <a href="/2026/">2026</a>
+            <span class="spacer"><a href="/">Home</a></span>
+            <span>&nbsp;</span>
+        </div>
+    </main>
+
+    <footer>
+        <a href="/2027/">Walk With Us</a>
+        <a href="/route/">Route</a>
+        <a href="/2025/">2025</a>
+        <a href="/2026/">2026</a>
+        <div class="footer-network">
+            <span>Elsewhere:</span>
+            <a href="https://jccangilla.com">jccangilla.com</a>
+            <a href="https://tuesdaymensclub.com">Tuesday Men's Club</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+
+        // Google Apps Script form post (same pattern as tmc-site/register.html).
+        // Writes to Sheet "California Walk Signups" via the CA Walk Signups Apps Script
+        // (GCP project 1027210891214). Deployed May 18 2026.
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw60qOTnO4MDovDMUlBGgWXAAVFbQS9q7zIbiTlxPH6i_Zpl2NZ2dJD79rybysgVaSUWA/exec';
+
+        const inviteForm = document.getElementById('invite-form');
+        inviteForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = inviteForm.querySelector('input[type="submit"]');
+            const originalValue = btn.value;
+            btn.value = 'Sending...';
+            btn.disabled = true;
+
+            const data = new URLSearchParams(new FormData(inviteForm));
+            // Also stamp the submission time client-side for the sheet
+            data.append('submitted_at', new Date().toISOString());
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                body: data
+            })
+            .then(() => {
+                inviteForm.style.display = 'none';
+                document.getElementById('form-success').style.display = 'block';
+            })
+            .catch(() => {
+                btn.value = originalValue;
+                btn.disabled = false;
+                alert("Couldn't send. Try again in a minute, or reach out to anyone you know who's been on the walk.");
+            });
+        });
+    </script>
+</body>
+</html>
