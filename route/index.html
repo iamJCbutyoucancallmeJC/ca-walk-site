@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route &middot; The California Walk</title>
+    <meta name="description" content="San Francisco, Santa Cruz, Monterey, Carmel, Big Sur. The shape of the walk down the coast.">
+    <meta property="og:title" content="Route -- The California Walk">
+    <meta property="og:description" content="San Francisco to Big Sur. The shape of the walk down the coast.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://thecaliforniawalk.com/route/">
+    <meta property="og:image" content="https://thecaliforniawalk.com/hero-image.jpg">
+    <link rel="canonical" href="https://thecaliforniawalk.com/route/">
+    <link rel="stylesheet" href="/style.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZSX5BPCNR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KZSX5BPCNR');
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="/"><img src="/california-walk-logo.png" alt="The California Walk"></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/route/" class="active">Route</a></li>
+                <li><a href="/2025/">2025</a></li>
+                <li><a href="/2026/">2026</a></li>
+                <li><a href="/2027/">2027</a></li>
+                <li><a href="/2027/" class="cta">Walk With Us</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="prose">
+        <h1 class="page-title">The Route</h1>
+
+        <div class="intro">
+            <p>The walk moves south, San Francisco to Big Sur. The exact shape changes year to year, but the spine stays the same: redwoods, coast, and a few base-camp nights at each end. Come for a day, come for the week.</p>
+        </div>
+
+        <hr class="rule">
+
+        <div class="landscape-grid">
+            <div class="landscape-item">
+                <div class="landscape-video">
+                    <video autoplay muted loop playsinline poster="/sf-clip.gif">
+                        <source src="/sf-clip.mp4" type="video/mp4">
+                        <img src="/sf-clip.gif" alt="San Francisco">
+                    </video>
+                </div>
+                <h3>San Francisco</h3>
+                <p>Sutro Heights, Golden Gate Park, the Embarcadero. The city on foot before the bus south. The feeling of starting something before you leave it all behind.</p>
+            </div>
+
+            <div class="landscape-item">
+                <div class="landscape-video">
+                    <video autoplay muted loop playsinline poster="/santa-cruz-clip.gif">
+                        <source src="/santa-cruz-clip.mp4" type="video/mp4">
+                        <img src="/santa-cruz-clip.gif" alt="Santa Cruz">
+                    </video>
+                </div>
+                <h3>Santa Cruz</h3>
+                <p>Beach town, redwood forest, home base. Henry Cowell Redwoods, river crossings, banana slugs on the forest floor. Three nights here: you walk all day, then come back to the same place.</p>
+            </div>
+
+            <div class="landscape-item">
+                <div class="landscape-video">
+                    <video autoplay muted loop playsinline poster="/monterey-clip.gif">
+                        <source src="/monterey-clip.mp4" type="video/mp4">
+                        <img src="/monterey-clip.gif" alt="Monterey">
+                    </video>
+                </div>
+                <h3>Monterey</h3>
+                <p>The bay trail along quiet beaches, maritime history from a local writer, good tacos. The stretch of coast where California starts to get dramatic.</p>
+            </div>
+
+            <div class="landscape-item">
+                <div class="landscape-video">
+                    <video autoplay muted loop playsinline poster="/carmel-clip.gif">
+                        <source src="/carmel-clip.mp4" type="video/mp4">
+                        <img src="/carmel-clip.gif" alt="Carmel">
+                    </video>
+                </div>
+                <h3>Carmel</h3>
+                <p>Garland Ranch and the valley behind the coast. Long, almost-empty hikes up into the highlands. Views that make you stop talking for a minute. Sometimes the route runs through here, sometimes it doesn't.</p>
+            </div>
+
+            <div class="landscape-item">
+                <div class="landscape-video">
+                    <video autoplay muted loop playsinline poster="/big-sur-clip.gif">
+                        <source src="/big-sur-clip.mp4" type="video/mp4">
+                        <img src="/big-sur-clip.gif" alt="Big Sur">
+                    </video>
+                </div>
+                <h3>Big Sur</h3>
+                <p>Tan Bark Trail, Pine Ridge, the river. Nights at Fernwood with a cabin kitchen and a meadow. Where the walk ends and something else begins.</p>
+            </div>
+        </div>
+
+        <hr class="rule">
+
+        <h2 class="section-title">The shape</h2>
+        <p>Base-camp model: a few nights in Santa Cruz, a night or two in Big Sur, day trips out from each. Less logistics, more presence. Discovered by accident in 2025 and kept on purpose since.</p>
+        <p>The walks have run anywhere from four days to seven. Come for a day, come for the week.</p>
+
+        <div class="page-nav">
+            <a href="/2026/">2026</a>
+            <span class="spacer"><a href="/">Home</a></span>
+            <a href="/2027/">2027</a>
+        </div>
+    </main>
+
+    <footer>
+        <a href="/2027/">Walk With Us</a>
+        <a href="/route/">Route</a>
+        <a href="/2025/">2025</a>
+        <a href="/2026/">2026</a>
+        <div class="footer-network">
+            <span>Elsewhere:</span>
+            <a href="https://jccangilla.com">jccangilla.com</a>
+            <a href="https://tuesdaymensclub.com">Tuesday Men's Club</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('navLinks').classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
