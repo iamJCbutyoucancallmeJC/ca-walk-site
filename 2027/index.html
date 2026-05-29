@@ -146,11 +146,15 @@
                 method: 'POST',
                 body: data
             })
-            .then(() => {
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error('HTTP ' + res.status + ' ' + res.statusText);
+                }
                 inviteForm.style.display = 'none';
                 document.getElementById('form-success').style.display = 'block';
             })
-            .catch(() => {
+            .catch(err => {
+                console.error('CA Walk signup submit failed', err);
                 btn.value = originalValue;
                 btn.disabled = false;
                 alert("Couldn't send. Try again in a minute, or reach out to anyone you know who's been on the walk.");
