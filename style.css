@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 /* The California Walk -- shared styles */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -519,3 +520,20 @@ footer a:hover { text-decoration: underline; }
 .ssdg-dbl { height: 3px; border-top: 1px solid #9db8d2; border-bottom: 1px solid #9db8d2; margin-top: 3px; }
 .ssdg-line { flex: 1; display: flex; align-items: flex-end; border-bottom: 1px solid #9db8d2; font-size: 10px; line-height: 1; padding-bottom: 1px; }
 .ssdg-id { padding-top: 3px; text-align: right; font-size: 6px; letter-spacing: 0.2em; color: rgba(38,38,38,0.5); }
+
+/* Elsewhere tile refinements (Aug 2026): real faces + leak-proofing */
+.tile-tmc span { font-family: 'Alfa Slab One', 'Arial Black', Arial, sans-serif; font-weight: 400; }
+.tile-linslow { background: #f4f2ee; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #3D7DBE; }
+.elsewhere-tiles { grid-template-columns: repeat(4, 1fr); max-width: 660px; }
+@media (max-width: 700px) { .elsewhere-tiles { grid-template-columns: repeat(2, 1fr); } }
+
+/* CA Walk: neutralize footer link/span styling inside the tiles */
+.footer-network .elsewhere-tiles a { margin: 0; font-style: normal; text-decoration: none; }
+.footer-network .elsewhere-tiles span { font-style: normal; margin-right: 0; font-size: inherit; color: inherit; }
+.footer-network .elsewhere-tiles a.tile-plain, .footer-network .elsewhere-tiles a.tile-linslow { font-size: 11px; }
+.footer-network .elsewhere-tiles a.tile-linslow { color: #3D7DBE; }
+.footer-network .elsewhere-tiles a.tile-plain { color: #555; }
+.footer-network .elsewhere-tiles a.tile-ssdg { color: #262626; height: 84px; text-align: left; }
+.footer-network .elsewhere-tiles .ssdg-head { text-align: center; font-size: 7px; color: rgba(38,38,38,0.7); }
+.footer-network .elsewhere-tiles .ssdg-line { font-size: 10px; }
+.footer-network .elsewhere-tiles .ssdg-id { font-size: 6px; color: rgba(38,38,38,0.5); }
