@@ -537,3 +537,10 @@ footer a:hover { text-decoration: underline; }
 .footer-network .elsewhere-tiles .ssdg-head { text-align: center; font-size: 7px; color: rgba(38,38,38,0.7); }
 .footer-network .elsewhere-tiles .ssdg-line { font-size: 10px; }
 .footer-network .elsewhere-tiles .ssdg-id { font-size: 6px; color: rgba(38,38,38,0.5); }
+
+/* Specificity fix: .elsewhere-tiles .tile was beating .tile-ssdg, collapsing the
+   card to centered text-width lines. Assert card layout at higher specificity. */
+.elsewhere-tiles a.tile { text-decoration: none; }
+.elsewhere-tiles .tile-ssdg { flex-direction: column; align-items: stretch; justify-content: flex-start; text-align: left; }
+.elsewhere-tiles .tile-ssdg .ssdg-line { display: flex; width: 100%; }
+.elsewhere-tiles .tile-tmc { justify-content: flex-start; }
