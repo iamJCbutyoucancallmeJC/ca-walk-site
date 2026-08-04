@@ -441,7 +441,6 @@ footer a:hover { text-decoration: underline; }
 .footer-network {
     margin-top: 1rem;
     padding-top: 1rem;
-    border-top: 1px solid #444;
     display: inline-block;
 }
 .footer-network span {
