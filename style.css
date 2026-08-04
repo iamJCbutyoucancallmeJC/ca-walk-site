@@ -510,8 +510,8 @@ footer a:hover { text-decoration: underline; }
 .elsewhere-tiles .tile { display: flex; min-height: 72px; align-items: center; justify-content: center; text-decoration: none; border: 1px solid transparent; }
 .elsewhere-tiles .tile:hover { border-color: #444; }
 .tile-plain { background: #f2f0ec; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #555; }
-.tile-tmc { background: #111; padding: 10px 14px; justify-content: flex-start; }
-.tile-tmc span { color: #fff; font-weight: 900; font-size: 15px; line-height: 0.9; letter-spacing: -0.01em; font-family: "Arial Black", Arial, sans-serif; }
+.tile-tmc { background: #111; padding: 8px 10px; justify-content: flex-start; }
+.tile-tmc span { color: #f2efe6; font-weight: 900; font-size: 19px; line-height: 0.9; letter-spacing: -0.01em; font-family: "Arial Black", Arial, sans-serif; }
 .tile-cawalk { background: #f8f6f3; padding: 10px 14px; }
 .tile-cawalk img { width: 100%; height: auto; }
 .tile-ssdg { background: #f7f1e2; border: 1px solid rgba(38,38,38,0.2); flex-direction: column; align-items: stretch; justify-content: flex-start; padding: 6px 12px; font-family: ui-monospace, Menlo, monospace; color: #262626; }
@@ -544,3 +544,6 @@ footer a:hover { text-decoration: underline; }
 .elsewhere-tiles .tile-ssdg { flex-direction: column; align-items: stretch; justify-content: flex-start; text-align: left; }
 .elsewhere-tiles .tile-ssdg .ssdg-line { display: flex; width: 100%; }
 .elsewhere-tiles .tile-tmc { justify-content: flex-start; }
+
+/* TMC span must not inherit the footer's gold link color (beats the color:inherit leak-guard) */
+.footer-network .elsewhere-tiles .tile-tmc span { color: #f2efe6; }
