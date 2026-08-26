@@ -1,12 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-/* The California Walk -- shared styles */
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&display=swap');
+/* The California Walk -- shared styles
+   v2 craft pass (Aug 2026, t493): Fraunces replaces system sans sitewide,
+   accent warmed from saddle brown to burnt sienna, homepage goes full-bleed
+   with the motion clips. Ruled source: site-v2-brief.md. */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+:root {
+    --ink: #2c2c2c;
+    --cream: #f8f6f3;
+    --accent: #b04a1c;        /* burnt sienna: sunset, tan bark, 70s poster */
+    --accent-deep: #8a3a15;
+    --redwood: #3e5c40;
+    --gold: #d9a441;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'San Francisco', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-optical-sizing: auto;
     line-height: 1.7;
-    color: #2c2c2c;
-    background: #f8f6f3;
+    color: var(--ink);
+    background: var(--cream);
 }
 html { scroll-behavior: smooth; }
 
@@ -31,7 +44,7 @@ nav {
     align-items: center;
     padding: 0 2rem;
 }
-.logo { height: 24px; }
+.logo { height: 44px; }
 .logo img { height: 100%; width: auto; }
 .logo a { display: block; height: 100%; }
 .nav-links { display: flex; list-style: none; gap: 1.5rem; }
@@ -41,21 +54,21 @@ nav {
     font-size: 0.9rem;
     font-weight: 500;
 }
-.nav-links a:hover { color: #8B4513; }
-.nav-links a.active { color: #8B4513; font-weight: 600; }
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); font-weight: 600; }
 .nav-links a.cta {
-    background: #8B4513;
+    background: var(--accent);
     color: white;
     padding: 0.35rem 0.9rem;
     border-radius: 4px;
     transition: background 0.15s;
 }
 .nav-links a.cta:hover {
-    background: #6f3610;
+    background: var(--accent-deep);
     color: white;
 }
 .nav-links a.cta.active {
-    background: #6f3610;
+    background: var(--accent-deep);
     color: white;
     font-weight: 600;
 }
@@ -91,7 +104,7 @@ h1.page-title {
 
 h2.section-title {
     font-size: 1.5rem;
-    color: #8B4513;
+    color: var(--accent);
     font-weight: 700;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
@@ -99,7 +112,7 @@ h2.section-title {
 
 h3.day-title {
     font-size: 1.25rem;
-    color: #8B4513;
+    color: var(--accent);
     font-weight: 700;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
@@ -126,12 +139,10 @@ hr.rule {
 }
 
 .prose blockquote {
-    border-left: 3px solid #8B4513;
-    padding: 0.4rem 1.5rem;
-    margin: 1.5rem 0;
+    margin: 1.8rem 2rem;
     color: #555;
     font-style: italic;
-    background: rgba(255, 255, 255, 0.6);
+    font-size: 1.12rem;
 }
 
 .prose blockquote em {
@@ -139,13 +150,13 @@ hr.rule {
 }
 
 .prose a {
-    color: #8B4513;
+    color: var(--accent);
     text-decoration: underline;
-    text-decoration-color: rgba(139, 69, 19, 0.35);
+    text-decoration-color: rgba(176, 74, 28, 0.35);
     text-underline-offset: 2px;
 }
 .prose a:hover {
-    text-decoration-color: #8B4513;
+    text-decoration-color: var(--accent);
 }
 
 .prose ol, .prose ul {
@@ -192,13 +203,11 @@ hr.rule {
     padding: 0;
 }
 .walk-list li {
-    padding: 1.1rem 0;
-    border-bottom: 1px solid #ece6dc;
+    padding: 0.85rem 0;
     font-size: 1.05rem;
 }
-.walk-list li:last-child { border-bottom: none; }
 .walk-list a {
-    color: #8B4513;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 600;
 }
@@ -218,7 +227,7 @@ hr.rule {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 .contact-block a {
-    color: #8B4513;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
@@ -233,11 +242,10 @@ hr.rule {
     justify-content: space-between;
     margin-top: 4rem;
     padding-top: 2rem;
-    border-top: 1px solid #ddd6cc;
     font-size: 1rem;
 }
 .page-nav a {
-    color: #8B4513;
+    color: var(--accent);
     text-decoration: none;
     font-weight: 600;
 }
@@ -279,8 +287,8 @@ hr.rule {
 .hero-title img {
     max-width: 100%;
     height: auto;
-    max-height: 280px;
-    filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.5));
+    max-height: 430px;
+    filter: drop-shadow(0 4px 22px rgba(0, 0, 0, 0.55));
 }
 .hero-dates {
     font-size: 1.35rem;
@@ -290,10 +298,10 @@ hr.rule {
     margin-bottom: 0.5rem;
 }
 .hero-tagline {
-    font-size: 1.1rem;
-    font-weight: 300;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.55);
-    opacity: 0.92;
+    font-size: 1.45rem;
+    font-weight: 400;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.7);
+    opacity: 0.97;
 }
 
 /* When a page leads with the hero, main shouldn't be pushed down by fixed nav */
@@ -316,9 +324,10 @@ main.has-hero {
     margin: 0 auto;
 }
 .landscape-video {
-    width: 200px;
-    height: 300px;
-    margin: 0 auto 1.5rem;
+    width: min(480px, 100%);
+    aspect-ratio: 3 / 4;
+    height: auto;
+    margin: 0 auto 1.2rem;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.14);
@@ -332,15 +341,17 @@ main.has-hero {
     display: block;
 }
 .landscape-item h3 {
-    color: #8B4513;
-    margin-bottom: 0.6rem;
-    font-size: 1.4rem;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 .landscape-item p {
-    font-size: 1.05rem;
-    line-height: 1.65;
-    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #666;
+    max-width: 480px;
+    margin: 0 auto;
 }
 
 /* ===========================================
@@ -382,12 +393,12 @@ main.has-hero {
 .invite-form input:focus,
 .invite-form textarea:focus {
     outline: none;
-    border-color: #8B4513;
+    border-color: var(--accent);
     background: white;
 }
 .invite-form input[type="submit"] {
     margin-top: 1.5rem;
-    background: #8B4513;
+    background: var(--accent);
     color: white;
     border: none;
     padding: 0.8rem 2rem;
@@ -398,7 +409,7 @@ main.has-hero {
     transition: background 0.15s;
 }
 .invite-form input[type="submit"]:hover {
-    background: #6f3610;
+    background: var(--accent-deep);
 }
 .invite-form input[type="submit"]:disabled {
     background: #aaa;
@@ -425,41 +436,23 @@ main.has-hero {
    FOOTER
 =========================================== */
 footer {
-    background: #2c2c2c;
-    color: white;
     text-align: center;
-    padding: 2.5rem 2rem;
-    margin-top: 4rem;
-}
-footer a {
-    color: #c9a87c;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 0.95rem;
-}
-footer a:hover { text-decoration: underline; }
-.footer-network {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    display: inline-block;
-}
-.footer-network span {
-    color: #888;
-    font-size: 0.85rem;
-    margin-right: 1rem;
-    font-style: italic;
-}
-.footer-network a {
-    color: #c9a87c;
-    margin: 0 0.6rem;
-    font-size: 0.9rem;
+    padding: 1.5rem 2rem 2.5rem;
+    margin-top: 2rem;
 }
 .footer-note {
-    margin-top: 1rem;
     font-size: 0.85rem;
-    color: #888;
+    color: #999;
     font-style: italic;
 }
+
+/* Elsewhere: tiles as a light page section (matches jccangilla.com treatment) */
+.elsewhere {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 2rem 3rem;
+}
+.elsewhere h2 { margin-top: 0; }
 
 /* ===========================================
    MOBILE
@@ -487,14 +480,14 @@ footer a:hover { text-decoration: underline; }
     .prose li { font-size: 1rem; }
     footer a { display: block; margin: 0.5rem 0; }
     .hero { height: 78vh; min-height: 460px; }
-    .hero-title img { max-height: 180px; }
+    .hero-title img { max-height: 260px; }
     .hero-dates { font-size: 1.1rem; }
-    .hero-tagline { font-size: 1rem; }
-    .landscape-video { width: 170px; height: 255px; }
+    .hero-tagline { font-size: 1.15rem; }
     .landscape-grid { gap: 2.8rem; }
+    .logo { height: 34px; }
     .nav-links a.cta {
         background: transparent;
-        color: #8B4513;
+        color: var(--accent);
         padding: 0;
         border-radius: 0;
         font-weight: 600;
@@ -526,16 +519,8 @@ footer a:hover { text-decoration: underline; }
 .elsewhere-tiles { grid-template-columns: repeat(4, 1fr); max-width: 660px; }
 @media (max-width: 700px) { .elsewhere-tiles { grid-template-columns: repeat(2, 1fr); } }
 
-/* CA Walk: neutralize footer link/span styling inside the tiles */
-.footer-network .elsewhere-tiles a { margin: 0; font-style: normal; text-decoration: none; }
-.footer-network .elsewhere-tiles span { font-style: normal; margin-right: 0; font-size: inherit; color: inherit; }
-.footer-network .elsewhere-tiles a.tile-plain, .footer-network .elsewhere-tiles a.tile-linslow { font-size: 11px; }
-.footer-network .elsewhere-tiles a.tile-linslow { color: #3D7DBE; }
-.footer-network .elsewhere-tiles a.tile-plain { color: #555; }
-.footer-network .elsewhere-tiles a.tile-ssdg { color: #262626; height: 84px; text-align: left; }
-.footer-network .elsewhere-tiles .ssdg-head { text-align: center; font-size: 7px; color: rgba(38,38,38,0.7); }
-.footer-network .elsewhere-tiles .ssdg-line { font-size: 10px; }
-.footer-network .elsewhere-tiles .ssdg-id { font-size: 6px; color: rgba(38,38,38,0.5); }
+/* Tiles sit in a light .elsewhere section; keep faces self-contained */
+.elsewhere-tiles a.tile-ssdg { color: #262626; height: 84px; text-align: left; }
 
 /* Specificity fix: .elsewhere-tiles .tile was beating .tile-ssdg, collapsing the
    card to centered text-width lines. Assert card layout at higher specificity. */
@@ -544,5 +529,169 @@ footer a:hover { text-decoration: underline; }
 .elsewhere-tiles .tile-ssdg .ssdg-line { display: flex; width: 100%; }
 .elsewhere-tiles .tile-tmc { justify-content: flex-start; }
 
-/* TMC span must not inherit the footer's gold link color (beats the color:inherit leak-guard) */
-.footer-network .elsewhere-tiles .tile-tmc span { color: #f2efe6; }
+.elsewhere-tiles .tile-tmc span { color: #f2efe6; }
+
+/* ===========================================
+   V2 CRAFT PASS (Aug 2026, t493)
+   Typography presence, motion hero, full-bleed homepage bands.
+   Homepage only below; year pages inherit fonts/palette above.
+=========================================== */
+
+h1.page-title { font-size: 3rem; font-weight: 800; letter-spacing: -0.015em; }
+h2.section-title { font-size: 1.7rem; font-weight: 700; }
+
+/* Motion hero: the vertical clips crop live via object-fit, so one file
+   serves desktop (center band) and phones (near-full frame). */
+.hero { height: 96vh; }
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+.hero-overlay {
+    background: linear-gradient(to bottom,
+        rgba(0, 0, 0, 0.30),
+        rgba(0, 0, 0, 0.18) 55%,
+        rgba(30, 30, 30, 0.55));
+}
+.hero-kicker {
+    font-family: ui-monospace, Menlo, monospace;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    opacity: 0.95;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Full-width homepage: main.home drops the column; .measure restores it per band */
+main.home { max-width: none; padding: 0; }
+main.home .measure { max-width: 720px; margin: 0 auto; padding: 0 2rem; }
+main.home .band { padding: 4.5rem 0; }
+main.home .band-tint { background: #f1ece2; }
+main.home .intro p:last-child { margin-bottom: 0; }
+
+/* The anti-promise, said at poster scale */
+.statement { padding: 6.5rem 0 6rem; text-align: center; }
+.statement .lines {
+    font-size: clamp(2.1rem, 6vw, 4.4rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+}
+.statement .after {
+    max-width: 640px;
+    margin: 2.2rem auto 0;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+}
+
+/* How we walk: the five understandings */
+.how-we-walk p.lead {
+    font-style: italic;
+    font-size: 1.15rem;
+    margin-bottom: 1.6rem;
+}
+.how-we-walk .understanding {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    margin-bottom: 1.2rem;
+}
+.how-we-walk .understanding:last-child { margin-bottom: 1.2rem; }
+
+/* Full-bleed motion band (carmel) carrying the route line */
+.band-motion {
+    position: relative;
+    height: 64vh;
+    min-height: 420px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2c2c2c center/cover no-repeat;
+}
+.band-motion video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.band-motion .scrim {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.34);
+}
+.band-motion .route-line {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 0 2rem;
+}
+.band-motion .places {
+    font-size: clamp(1.35rem, 3.4vw, 2.1rem);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.6rem;
+}
+.band-motion .route-link a {
+    color: white;
+    font-size: 1.05rem;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+.band-motion .route-link a:hover { text-decoration-color: white; }
+
+/* The door */
+.door { text-align: center; padding-bottom: 1rem; }
+.door h2 { margin-top: 0; }
+.door p { font-size: 1.15rem; max-width: 560px; margin: 0 auto 1.2rem; }
+.door .cta-button-text {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: var(--accent);
+    color: white;
+    padding: 0.85rem 1.9rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.15s;
+}
+.door .cta-button-text:hover { background: var(--accent-deep); }
+
+/* 2027 day-shape sketch */
+.day-shape { list-style: none; margin: 1rem 0 1.5rem 0; }
+.day-shape li {
+    padding: 0.7rem 0;
+    margin-bottom: 0;
+}
+.day-shape li .day-tag {
+    font-weight: 700;
+    font-size: 1.02rem;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.1rem;
+}
+.money-sentence {
+    font-size: 1.15rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-video, .band-motion video { display: none; }
+}
+
+@media (max-width: 768px) {
+    h1.page-title { font-size: 2.3rem; }
+    .hero-kicker { font-size: 0.72rem; letter-spacing: 0.2em; }
+    main.home .measure { padding: 0 1.5rem; }
+    main.home .band { padding: 3.2rem 0; }
+    .statement { padding: 4.5rem 0 4rem; }
+    .band-motion { height: 70vh; }
+    .hero { height: 88vh; }
+}
