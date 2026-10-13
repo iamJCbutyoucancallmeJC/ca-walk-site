@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Newsreader:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Newsreader:ital,opsz,wght@0,6..72,400..800;1,6..72,400..800&display=swap');
 /* The California Walk -- shared styles
-   v2 craft pass (Aug 2026, t493): Fraunces replaces system sans sitewide,
+   v2 craft pass (Aug 2026, t493): a serif replaces system sans sitewide (Fraunces;
+   Newsreader from Oct 13 2026, JC: 'I don't like this font'),
    accent warmed from saddle brown to burnt sienna, homepage goes full-bleed
    with the motion clips. Ruled source: site-v2-brief.md. */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -15,7 +16,7 @@
 }
 
 body {
-    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
     font-optical-sizing: auto;
     line-height: 1.7;
     color: var(--ink);
