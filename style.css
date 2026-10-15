@@ -529,7 +529,7 @@ footer {
 
 /* Elsewhere tile refinements (Aug 2026): real faces + leak-proofing */
 .tile-tmc span { font-family: 'Alfa Slab One', 'Arial Black', Arial, sans-serif; font-weight: 400; }
-.tile-linslow { background: #f4f2ee; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #3D7DBE; }
+.tile-linslow { background: #f4f2ee; font-family: ui-monospace, Menlo, monospace; font-size: 11px; color: #1d4f88; }
 .elsewhere-tiles { grid-template-columns: repeat(4, 1fr); max-width: 660px; }
 @media (max-width: 700px) { .elsewhere-tiles { grid-template-columns: repeat(2, 1fr); } }
 
