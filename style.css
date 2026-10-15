@@ -13,7 +13,11 @@
     --accent-deep: #8a3a15;
     --redwood: #3e5c40;
     --gold: #d9a441;
+    --pen: #2f6fb0;           /* the family blue: the focus ring (t1803) */
 }
+
+/* Keyboard focus: 2px solid pen, 2px offset, everywhere. Links stay sienna. */
+:focus-visible { outline: 2px solid var(--pen); outline-offset: 2px; }
 
 body {
     font-family: 'Newsreader', Georgia, 'Times New Roman', serif;
@@ -402,7 +406,6 @@ main.has-hero {
 }
 .invite-form input:focus,
 .invite-form textarea:focus {
-    outline: none;
     border-color: var(--accent);
     background: white;
 }
@@ -455,6 +458,7 @@ footer {
     color: #999;
     font-style: italic;
 }
+.footer-note a { color: var(--accent); text-underline-offset: 2px; }
 
 /* Elsewhere: tiles as a light page section (matches jccangilla.com treatment) */
 .elsewhere {

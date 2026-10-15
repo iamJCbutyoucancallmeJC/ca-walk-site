@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "site": {
+    "name": "The California Walk",
+    "url": "https://thecaliforniawalk.com",
+    "home": "/"
+  },
+  "entries": [
+    {
+      "date": "2026-10-15",
+      "title": "The family's focus ring",
+      "summary": "Keyboard focus draws a 2px pen ring on every link, button and field, the invite form included. Links stay sienna, the walk's one treatment; the Elsewhere tiles hover in pen."
+    },
+    {
+      "date": "2026-10-13",
+      "title": "Newsreader replaces Fraunces",
+      "summary": "Fraunces is gone (JC: “I don’t like this font”). Newsreader, a text serif with optical sizes, now sets every page, in the walk’s register: warm, story-first, a letter from a friend."
+    }
+  ]
+}
