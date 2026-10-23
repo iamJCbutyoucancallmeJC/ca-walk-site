@@ -722,3 +722,18 @@ main.home .intro p:last-child { margin-bottom: 0; }
     .band-motion { height: 70vh; }
     .hero { height: 88vh; }
 }
+
+/* ===========================================
+   YEAR PAGES: walk photos and the chorus (t1239, 2026-10-22)
+=========================================== */
+.walk-photo { margin: 2rem 0 2.4rem; }
+.walk-photo img { display: block; width: 100%; height: auto; border-radius: 2px; }
+.walk-photo.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; align-items: start; }
+.walk-photo.wide { margin-left: -6vw; margin-right: -6vw; }
+@media (min-width: 900px) { .walk-photo.wide { margin-left: -120px; margin-right: -120px; } }
+@media (max-width: 600px) { .walk-photo.wide { margin-left: -2rem; margin-right: -2rem; } .walk-photo img { border-radius: 0; } }
+
+.chorus { margin: 1.4rem 0 2.6rem; }
+.chorus .chorus-q { margin: 1.8rem 0 0.4rem; font-size: 0.95rem; color: #777; font-style: normal; }
+.chorus blockquote { margin: 0 0 0 1.2rem; padding-left: 1rem; border-left: 2px solid var(--accent); }
+.chorus blockquote cite { display: block; margin-top: 0.5rem; font-style: normal; font-size: 0.9rem; color: var(--accent-deep); letter-spacing: 0.02em; }
